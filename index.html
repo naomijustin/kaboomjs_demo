@@ -3,7 +3,7 @@
 <head>   
    <meta charset = "UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <title>Zelda Game Test</title>
+   <title>Kaboom Game Test</title>
    <base href="index.html" target="blank">
   
 </head>
@@ -39,9 +39,13 @@ k.scene("level1", () => {
   k.text("Level 1", 20),
   k.pos(200, 200),
   ]);
+  k.camShake(12);
+  k.mouseClick(() => {
+    k.go("titlescreen");
+  });
 
   const player = k.add([
-    k.sprite("froggy"),  
+    k.sprite("froggy"),
   ]);
 
 });
