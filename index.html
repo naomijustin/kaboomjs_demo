@@ -1,50 +1,38 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>My first three.js app</title>
-		<style>
-			body { margin: 0; }
-		</style>
-	</head>
-	<body>
-		<script type="module">
+<html lang="en">
+<head>   
+   <meta charset = "UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <title>Zelda Game Test</title>
+   <base href="index.html" target="blank">
+  
+</head>
+<body>
+<script src="https://kaboomjs.com/lib/0.5.1/kaboom.js"></script>
+<script type="module">
 
-import * as THREE from 'https://cdn.skypack.dev/three'
+// initialize kaboom context
+const k = kaboom();
 
-let camera, scene, renderer;
-let geometry, material, mesh;
+// define a scene
+k.scene("main", () => {
 
-init();
+    // add a text at position (100, 100)
+    k.add([
+        k.text("Hi Victor", 20),
+        k.pos(200, 200),
+    ]);
 
-function init() {
+});
 
-    camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 10 );
-    camera.position.z = 1;
+// start the game
+k.start("main");
 
-    scene = new THREE.Scene();
-
-    geometry = new THREE.BoxGeometry( 0.2, 0.2, 0.2 );
-    material = new THREE.MeshNormalMaterial();
-
-    mesh = new THREE.Mesh( geometry, material );
-    scene.add( mesh );
-
-    renderer = new THREE.WebGLRenderer( { antialias: true } );
-    renderer.setSize( window.innerWidth, window.innerHeight );
-    renderer.setAnimationLoop( animation );
-    document.body.appendChild( renderer.domElement );
-
-}
-
-function animation( time ) {
-
-    mesh.rotation.x = time / 2000;
-    mesh.rotation.y = time / 1000;
-
-    renderer.render( scene, camera );
-
-}
-		</script>
-	</body>
+</script>
+   <main>       
+   </main>
+</body>
 </html>
+ 
+ 
+

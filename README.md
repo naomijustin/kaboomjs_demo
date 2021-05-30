@@ -1,5 +1,5 @@
-# Three JS Demo
+# Kaboom JS Demo
 
-## Testing Three JS
+## Testing Kaboom JS
 
-<p>Testing Three JS Library to create a 3D environment that a player can explore</p>
+<p>Testing Kaboom JS Library to create a 2D game that a player can explore</p>
