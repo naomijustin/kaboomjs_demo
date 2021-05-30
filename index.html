@@ -15,7 +15,7 @@
 const k = kaboom();
 
 // define a scene
-k.scene("main", () => {
+k.scene("titlescreen", () => {
 
     // add a text at position (100, 100)
     k.add([
@@ -23,10 +23,23 @@ k.scene("main", () => {
         k.pos(200, 200),
     ]);
 
+
+    k.mouseClick(() => {
+      k.go("level1");
+    });
+
+});
+
+k.scene("level1", () => {
+  k.add(
+  [
+  k.text("Level 1", 20),
+  k.pos(200, 200),
+  ]);
 });
 
 // start the game
-k.start("main");
+k.start("titlescreen");
 
 </script>
    <main>       
